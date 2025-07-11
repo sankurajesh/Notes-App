@@ -1,0 +1,7 @@
+<app-header></app-header>
+ 
+<main [ngClass]="{'main': true, 'centered': isCentered, 'fullpage': !isCentered}">
+  <router-outlet></router-outlet>
+</main>
+
+<app-footer></app-footer>

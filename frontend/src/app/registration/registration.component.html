@@ -1,0 +1,44 @@
+<mat-card class="reg-card">
+<mat-card-header>
+    <mat-card-title class="label">Create a new account</mat-card-title>
+</mat-card-header>
+<form [formGroup]="regForm" (submit)="onSubmit()">
+<mat-form-field class="full-width">
+    <mat-label>First Name</mat-label>
+    <input matInput type="text" name="firstName" formControlName="firstName" required>
+    <mat-error *ngIf="regForm.get('firstName')?.hasError('required')">First Name is required</mat-error>
+</mat-form-field>
+<mat-form-field class="full-width">
+    <mat-label>Last Name</mat-label>
+    <input matInput type="text" name="lastName" formControlName="lastName" required>
+    <mat-error *ngIf="regForm.get('lastName')?.hasError('required')">First Name is required</mat-error>
+</mat-form-field>
+<mat-form-field class="full-width">
+    <mat-label>Email</mat-label>
+    <input matInput type="email" name="email" formControlName="email" required>
+    <mat-error *ngIf="regForm.get('email')?.hasError('required')">First Name is required</mat-error>
+</mat-form-field>
+<mat-form-field class="full-width">
+    <mat-label>Phone</mat-label>
+    <input matInput type="phone" name="phone" formControlName="phone" required>
+    <mat-error *ngIf="regForm.get('phone')?.hasError('required')">First Name is required</mat-error>
+</mat-form-field>
+<mat-form-field class="full-width">
+    <mat-label>User Name</mat-label>
+    <input matInput type="text" name="userName" formControlName="userName" required>
+    <mat-error *ngIf="regForm.get('userName')?.hasError('required')">First Name is required</mat-error>
+</mat-form-field>
+<mat-form-field class="full-width">
+    <mat-label>Password</mat-label>
+    <input matInput type="text" name="password" formControlName="password" required>
+    <mat-error *ngIf="regForm.get('password')?.hasError('required')">Password is required</mat-error>
+</mat-form-field>
+<section>
+  <div class="example-button-row">
+    <button type="submit" mat-flat-button color="primary">Sign Up</button>
+    <hr>
+    <a mat-button routerLink="/login" routerLinkActive="router-link-active" >Already have an account?</a>
+  </div>
+</section>
+</form>
+</mat-card>

@@ -1,0 +1,19 @@
+<header class="app-header">
+  <div class="container">
+    <h1 class="logo">My Notes App</h1>
+    <ng-container *ngIf="authService.isAuthenticated() !== null">
+    <nav *ngIf="!(authService.isAuthenticated()); else loggedInLinks">
+      <a routerLink="/login" routerLinkActive="router-link-active">Login</a>
+      <a routerLink="/registration" routerLinkActive="router-link-active">Registration</a>
+    </nav>
+
+    <ng-template #loggedInLinks>
+      <nav>
+        <a routerLink="/notes" routerLinkActive="router-link-active">My Notes</a>
+        <a routerLinkActive="router-link-active" (click)="logout()">Logout</a>
+      </nav>
+    </ng-template>
+    </ng-container>
+  </div>
+</header>
+

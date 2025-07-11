@@ -1,0 +1,14 @@
+@use '@angular/material/theming' as mat;
+
+// Include core styles
+@include mat.core();
+
+// Create palettes
+$primary: mat.define-palette(mat.$indigo-palette);
+$accent: mat.define-palette(mat.$pink-palette);
+
+// Create light theme
+$theme: mat.define-light-theme($primary, $accent);
+
+// Apply theme to all components
+@include mat.all-component-themes($theme);

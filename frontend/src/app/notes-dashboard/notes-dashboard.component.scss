@@ -1,0 +1,28 @@
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  width: 70%;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.note-card {
+  padding: 8px;
+}
+
+.note-footer {
+  margin-top: 12px;
+  color: gray;
+}
+.grid-bottom {
+margin-bottom: 100px;
+}

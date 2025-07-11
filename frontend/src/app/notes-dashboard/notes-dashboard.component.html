@@ -1,0 +1,28 @@
+<div class="dashboard-header">
+  <mat-form-field appearance="outline" class="search-bar">
+    <mat-label>Search notes</mat-label>
+    <input matInput />
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+  <div class="example-button-container">
+        <button mat-raised-button (click)="addNote()">
+          Add Note
+        </button>
+      </div>
+  <button mat-icon-button>
+    <mat-icon>account_circle</mat-icon>
+  </button>
+</div>
+
+<div class="grid-bottom">
+<div class="notes-grid">
+  <mat-card *ngFor="let note of notes" class="note-card">
+    <mat-card-title>{{ note.title }}</mat-card-title>
+    <mat-card-content>{{ note.content }}</mat-card-content>
+    <mat-card-footer class="note-footer">
+      <small>{{ note.date }}</small>
+    </mat-card-footer>
+  </mat-card>
+</div>
+</div>
+

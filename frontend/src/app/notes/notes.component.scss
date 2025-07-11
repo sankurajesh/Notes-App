@@ -1,0 +1,18 @@
+.content {
+  padding: 16px;
+  background: #f4f6f8;
+  height: 100vh;
+  overflow-y: auto;
+}
+.sidenav-container {
+  margin-top: 50px;
+  margin-bottom: 40px;
+  //min-height: calc(100vh - 90px);
+}
+
+.sidenav {
+  width: 240px;
+  background-color: #f2f2f2;
+  color: #1f1f1f;
+  //position: fixed;
+}

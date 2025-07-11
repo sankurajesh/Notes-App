@@ -1,0 +1,25 @@
+<mat-card class="login-card">
+<mat-card-header>
+    <mat-card-title>Log into notes</mat-card-title>
+</mat-card-header>
+<form [formGroup]="loginForm" (submit)="onSubmit()">
+<mat-form-field class="full-width">
+    <mat-label>User Name</mat-label>
+    <input matInput type="text" name="userName" formControlName="userName" required>
+    <mat-error *ngIf="loginForm.get('userName')?.hasError('required')">User name is required</mat-error>
+</mat-form-field>
+<mat-form-field class="full-width">
+    <mat-label>Password</mat-label>
+    <input matInput type="text" name="password" formControlName="password" required>
+    <mat-error *ngIf="loginForm.get('password')?.hasError('required')">Password is required</mat-error>
+</mat-form-field>
+<section>
+  <div class="example-button-row">
+    <button type="submit" mat-flat-button color="primary">Login</button>
+    <hr>
+    <a mat-button routerLink="/login" routerLinkActive="router-link-active" >Forgot Password?</a>
+    <a mat-button routerLink="/registration" routerLinkActive="router-link-active" >Create new account</a>
+  </div>
+</section>
+</form>
+</mat-card>

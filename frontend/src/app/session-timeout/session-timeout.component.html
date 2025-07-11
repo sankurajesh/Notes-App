@@ -1,0 +1,9 @@
+<!-- <h2>Session Expiring</h2>
+<p>You will be logged out in {{ counter }} seconds.</p>
+<button mat-raised-button color="primary" (click)="continue()">Continue Session</button> -->
+  
+<h2 mat-dialog-title>Session Expiring</h2>
+<mat-dialog-content>You will be logged out in {{ counter }} seconds.</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close (click)="continue()">Continue Session</button>
+</mat-dialog-actions>
