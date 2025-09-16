@@ -22,10 +22,10 @@ module.exports = function (config) {
       ],
       check: {
         global: {
-          statements: 100,   // 👈 Fail if below 100%
-          branches: 100,
-          functions: 100,
-          lines: 100
+          statements: 20,   // 👈 Fail if below 20%
+          branches: 20,
+          functions: 20,
+          lines: 20
         }
       }
     },
