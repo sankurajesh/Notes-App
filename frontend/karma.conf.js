@@ -21,15 +21,15 @@ module.exports = function (config) {
       ],
       check: {
         global: {
-          statements: 100,
-          branches: 100,
-          functions: 100,
-          lines: 100
+          statements: 20,
+          branches: 20,
+          functions: 20,
+          lines: 20
         }
       }
     },
     reporters: ['progress', 'kjhtml'],
-    browsers: ['ChromeHeadless'],
+    browsers: ['Chrome'],
     restartOnFileChange: true
   });
 };

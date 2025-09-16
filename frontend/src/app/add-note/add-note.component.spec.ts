@@ -1,6 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AddNoteComponent } from './add-note.component';
+import { provideHttpClient } from '@angular/common/http';
+import { provideRouter } from '@angular/router';
+import { provideNativeDateAdapter } from '@angular/material/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('AddNoteComponent', () => {
   let component: AddNoteComponent;
@@ -8,7 +12,12 @@ describe('AddNoteComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AddNoteComponent]
+      imports: [AddNoteComponent, BrowserAnimationsModule],
+      providers: [
+        provideHttpClient(),
+        provideRouter([]),
+        provideNativeDateAdapter(),             
+      ]
     })
     .compileComponents();
 

@@ -18,7 +18,6 @@ export const appConfig: ApplicationConfig = {
     provideClientHydration(),
     provideHttpClient(withInterceptors([authInterceptor])),
     provideAnimations(),
-    BrowserAnimationsModule,
     provideNativeDateAdapter(),
   ],
 };
