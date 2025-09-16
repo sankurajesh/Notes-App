@@ -16,19 +16,20 @@ module.exports = function (config) {
       dir: require('path').join(__dirname, './coverage'),
       subdir: '.',
       reporters: [
-        { type: 'html' },
-        { type: 'lcov' }
+        { type: 'html' },          // Full detailed report in /coverage/index.html
+        { type: 'lcov' },          // For CI tools (e.g., Codecov, SonarQube)
+        { type: 'text-summary' }   // 👈 Prints coverage % in terminal & CI logs
       ],
       check: {
         global: {
-          statements: 20,
-          branches: 20,
-          functions: 20,
-          lines: 20
+          statements: 100,   // 👈 Fail if below 100%
+          branches: 100,
+          functions: 100,
+          lines: 100
         }
       }
     },
-    reporters: ['progress', 'kjhtml'],
+    reporters: ['progress', 'coverage'],
     browsers: ['Chrome'],
     restartOnFileChange: true
   });
