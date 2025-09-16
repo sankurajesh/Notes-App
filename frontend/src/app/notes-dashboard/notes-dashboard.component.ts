@@ -3,7 +3,6 @@ import { MATERIAL_MODULES } from '../shared/material';
 import { CommonModule } from '@angular/common';
 import { SessionTimeoutService } from '../session/session-timeout.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { title } from 'process';
 import { MatDialog } from '@angular/material/dialog';
 import { AddNoteComponent } from '../add-note/add-note.component';
 import { NotesService } from '../services/notes.service';

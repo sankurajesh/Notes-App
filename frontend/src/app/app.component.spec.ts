@@ -1,10 +1,24 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { provideHttpClient } from '@angular/common/http';
+import { ActivatedRoute } from '@angular/router';
+import { of } from 'rxjs';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [AppComponent],
+      providers: [
+      provideHttpClient(),  
+       {
+        provide: ActivatedRoute,
+        useValue: {
+          params: of({ id: '123' }),  // mock route params
+          queryParams: of({}),
+          snapshot: { paramMap: new Map() }
+        }
+      }
+    ]
     }).compileComponents();
   });
 
@@ -24,6 +38,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, frontend-app');
+    expect(compiled.querySelector('h1')?.textContent).toContain('My Notes App');
   });
 });
