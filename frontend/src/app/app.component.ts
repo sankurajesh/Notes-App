@@ -17,6 +17,7 @@ import { AuthorizationService } from './services/auth.service';
 })
 export class AppComponent {
   isCentered = false;
+  title = "frontend-app"
   isLoggedIn: (boolean | null) = null;
   constructor(private router: Router, private sessionTimeout: SessionTimeoutService, private authService: AuthorizationService) {
     this.router.events.pipe(filter(event => event instanceof NavigationEnd)).
