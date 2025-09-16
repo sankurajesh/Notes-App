@@ -6,6 +6,7 @@ on:
 
 jobs:
   test-frontend:
+    name: Unit Tests & Coverage
     runs-on: ubuntu-latest
     defaults:
       run:
